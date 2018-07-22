@@ -33,4 +33,8 @@ In this section we will go over creating a node.js project in IBM Cloud and the 
 
 ![Unique Name](images/uniquename.png)
 
+6.	Your app is being deployed and may take a few minutes to start. View the status near the top of the page and verify that your app is eventually running. Don't be alarmed if the status says the app is not running. Click on Overview to manage your new app.
+
+![Dashboard](images/dashboard.png)
+
 (Content Under Development)
