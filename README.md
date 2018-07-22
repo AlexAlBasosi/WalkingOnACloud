@@ -111,4 +111,14 @@ Now that our Hello World app is complete, let’s go over some of the details of
 
 This tells the server to listen for connection requests. A connection will happen when you tell your browser to visit that page.
 
+## Connecting to a Database
+
+### Cloudant Introduction
+
+In this tutorial, you'll learn how to setup and use a database for your app. A database allows you to store information and retrieve it later. A website like Facebook will use a database to store your pictures, posts, profile information etc. This tutorial assumes that you have completed the Hello World tutorial.
+
+You can think of a Cloudant database as a box that holds a collection of similar objects called documents. Each document will have a list of properties with their respective values as name-value pairs in a format called JSON. For instance, the properties could be the name, color, type etc.
+
+As an example, imagine a box full of toys. You can use a database to represent the box. Each toy will have a corresponding document and each document will describe each toy with name value pairs such as type:ball, color:red, size:big etc.
+
 (Content Under Development)
