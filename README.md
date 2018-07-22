@@ -47,4 +47,24 @@ In this section we will go over creating a node.js project in IBM Cloud and the 
 
 ![Git](images/git.png)
 
+10.	This will create a toolchain for your app. Now lets click on Eclipse Orion Web IDE to edit your code.
+
+![Toolchain](images/toolchain.png)
+
+11.	You may need to create a new launch configuration. Click the dropdown next to Create a new launch configuration, then click the plus sign.
+
+![Launch](images/launch.png)
+
+12.	Take the default values in the popup that opens and click Save.
+
+13.	Click on Live Edit near the top center. This allows you to see changes reflected on your page as you make them. When asked to redeploy your app to enable live editing, click on OK. Wait until the app is running before continuing.
+
+![Live Edit](images/liveedit.png)
+
+14.	Click on the box with an arrow pointing to the upper right (open the deployed app) and see the basic webpage that it gives you. If your app is not yet running, you will get an error and the page will not load.
+
+![Arrow](images/arrow.png)
+
+![Hello World](images/helloworld.png)
+
 (Content Under Development)
