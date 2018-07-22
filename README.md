@@ -11,3 +11,12 @@ This repository consists of lab exercises that will show you how to create a web
 3.	Create Database Entries – This exercise will expand what was discussed in the previous section and go into more details of how to input data into your database.
 4.	GUI Introduction – This exercise discusses how to add graphical elements to your web application.
 5.	Watson Language Translator Introduction – This exercise adds a Watson Language Translator to your application and explains how to use the service to translate text.
+
+## Hello World
+
+In this section we will go over creating a node.js project in IBM Cloud and the basic setup. We will create a simple hello world application that will run on a node.js server with a simple webpage.
+
+1.	Login to IBM Cloud or create an account.
+2.	From the main page click on Catalog in the upper right hand side.
+
+![Catalog](images/catalog.png)
