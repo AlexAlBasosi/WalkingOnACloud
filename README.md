@@ -87,4 +87,12 @@ We want our website to have our own things so let's customize it. Return to the 
 
 ![HTML](images/html.png)
 
+Our initial page will simply have a head tag which puts text at the top of the browser window and a body tag which contains the text to be displayed on the web page.
+
+21. Go back to the browser page with your app and refresh to see the changes. (there might be a delay in how fast you can refresh).
+
+### Bonus: How the Server Works
+
+potato
+
 (Content Under Development)
