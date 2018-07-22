@@ -41,4 +41,10 @@ In this section we will go over creating a node.js project in IBM Cloud and the 
 
 ![Continuous Delivery](images/continuousdelivery.png)
 
+8.	A new page will open for Continuous Delivery Toolchain. 
+
+9.	Under Tool Integrations, select Git Repos and Issue Tracking. Create a Git Repository by cloning from the nodejs HelloWorld starter code (automatically filled in for you). Enter a Repository Name. You can uncheck Make this repository private if you want to be able to share your code. Click Create.
+
+![Git](images/git.png)
+
 (Content Under Development)
