@@ -71,7 +71,7 @@ This is a real web page accessible from any device. You can type the URL into yo
 
 We want our website to have our own things so let's customize it. Return to the previous tab with the DevOps code.
 
-⋅⋅* From the file list on the left, click on public then index.html
+16. From the file list on the left, click on public then index.html
 
 ![Index](images/index.png)
 
@@ -96,5 +96,11 @@ Our initial page will simply have a head tag which puts text at the top of the b
 Now that our Hello World app is complete, let’s go over some of the details of how the server code works. Choose file app.js to see the server code. This is the node.js portion of your application, which runs on the server.
 
 ![App](images/app.png)
+
+* Line 9: var express = require('express'); Require is used to import required modules (in this case express). Basically, this tells the compiler that you are going to be using it. Express is a library that makes it easier to setup the server.
+
+* Line 16: var app = express(); This will create the server.
+
+* Line 19: app.use(express.static(__dirname + '/public')) This tells the server that you will be using the "public" directory as your default directory. If you look at the files on the left-hand side, you'll notice that the index.html file resides in this directory. This is how the server knows where to get that file.
 
 (Content Under Development)
