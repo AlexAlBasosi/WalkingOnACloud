@@ -93,6 +93,8 @@ Our initial page will simply have a head tag which puts text at the top of the b
 
 ### Bonus: How the Server Works
 
-potato
+Now that our Hello World app is complete, let’s go over some of the details of how the server code works. Choose file app.js to see the server code. This is the node.js portion of your application, which runs on the server.
+
+![App](images/app.png)
 
 (Content Under Development)
