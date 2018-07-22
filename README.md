@@ -21,11 +21,11 @@ In this section we will go over creating a node.js project in IBM Cloud and the 
 
 ![Catalog](images/catalog.png)
 
-3.	Click on Cloud Foundry Apps under Platform.
+3.	Click on Compute under All Categories.
 
-![Cloud Foundry](images/cloudfoundry.png)
+![Compute](images/compute.png)
 
-4.	Choose SDK for Node.js.
+4.	Scroll down until you find SDK for Node.js.
 
 ![Node.js](images/nodejs.png)
 
