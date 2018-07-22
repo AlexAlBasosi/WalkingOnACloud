@@ -29,4 +29,8 @@ In this section we will go over creating a node.js project in IBM Cloud and the 
 
 ![Node.js](images/nodejs.png)
 
+5.	Enter a unique name for the app. If the name is not unique, you will get an error. As an example, you can put your user name in front of the app name. Leave the rest with the default values and click Create at the bottom of the page.
+
+![Unique Name](images/uniquename.png)
+
 (Content Under Development)
