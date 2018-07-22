@@ -83,4 +83,8 @@ We want our website to have our own things so let's customize it. Return to the 
 
 ![Jennifer](images/jennifer.png)
 
+20. HTML is what your browser uses to generate a web page. For more info on HTML, you can search the internet for tutorials.
+
+![HTML](images/html.png)
+
 (Content Under Development)
