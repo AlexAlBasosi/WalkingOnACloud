@@ -71,7 +71,7 @@ This is a real web page accessible from any device. You can type the URL into yo
 
 We want our website to have our own things so let's customize it. Return to the previous tab with the DevOps code.
 
-⋅⋅1. From the file list on the left, click on public then index.html
+⋅⋅* From the file list on the left, click on public then index.html
 
 ![Index](images/index.png)
 
