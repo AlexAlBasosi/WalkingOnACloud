@@ -79,6 +79,8 @@ We want our website to have our own things so let's customize it. Return to the 
 
 18. In this repository, go to snippets/index.html and add the code found in the document (substituting yourname for your actual name).
 
+![Your Name](images/yourname.png)
+
 19. Save your changes.
 
 ![Jennifer](images/jennifer.png)
@@ -102,5 +104,12 @@ Now that our Hello World app is complete, let’s go over some of the details of
 * *Line 16*: `var app = express();` This will create the server.
 
 * *Line 19*: `app.use(express.static(__dirname + '/public'))` This tells the server that you will be using the "public" directory as your default directory. If you look at the files on the left-hand side, you'll notice that the index.html file resides in this directory. This is how the server knows where to get that file.
+
+* *Lines 25-28:* 
+
+`app.listen(appEnv.port, '0.0.0.0', function() {
+// print a message when the server starts listening
+console.log("server starting on " + appEnv.url);
+});`
 
 (Content Under Development)
