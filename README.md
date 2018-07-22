@@ -69,9 +69,14 @@ In this section we will go over creating a node.js project in IBM Cloud and the 
 
 This is a real web page accessible from any device. You can type the URL into your mobile phone to view it.
 
-15.	We want our website to have our own things so let's customize it. Return to the previous tab with the DevOps code.
-    a.	From the file list on the left, click on public then index.html
+We want our website to have our own things so let's customize it. Return to the previous tab with the DevOps code.
 
-    ![Index](images/index.png)
+16. From the file list on the left, click on public then index.html
+
+![Index](images/index.png)
+
+17. The code should appear in the pane on the right. Select all the code and delete it (press Ctrl+A, then Delete)
+
+`` Test ``
 
 (Content Under Development)
