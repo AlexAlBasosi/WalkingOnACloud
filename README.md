@@ -20,3 +20,8 @@ In this section we will go over creating a node.js project in IBM Cloud and the 
 2.	From the main page click on Catalog in the upper right hand side.
 
 ![Catalog](images/catalog.png)
+
+3.	Click on Cloud Foundry Apps under Platform.
+![Cloud Foundry](images/cloudfoundry.png)
+
+(Content Under Development)
