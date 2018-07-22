@@ -107,9 +107,8 @@ Now that our Hello World app is complete, let’s go over some of the details of
 
 * *Lines 25-28:* 
 
-`app.listen(appEnv.port, '0.0.0.0', function() {
-// print a message when the server starts listening
-console.log("server starting on " + appEnv.url);
-});`
+![Lines](images/lines.png)
+
+This tells the server to listen for connection requests. A connection will happen when you tell your browser to visit that page.
 
 (Content Under Development)
