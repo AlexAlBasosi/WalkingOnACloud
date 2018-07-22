@@ -77,6 +77,10 @@ We want our website to have our own things so let's customize it. Return to the 
 
 17. The code should appear in the pane on the right. Select all the code and delete it (press Ctrl+A, then Delete)
 
-`` Test ``
+18. In this repository, go to snippets/index.html and add the code found in the document.(substituting yourname for your actual name).
+
+19. Save your changes.
+
+![Jennifer](images/jennifer.png)
 
 (Content Under Development)
