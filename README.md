@@ -25,4 +25,8 @@ In this section we will go over creating a node.js project in IBM Cloud and the 
 
 ![Cloud Foundry](images/cloudfoundry.png)
 
+4.	Choose SDK for Node.js.
+
+![Node.js](images/nodejs.png)
+
 (Content Under Development)
