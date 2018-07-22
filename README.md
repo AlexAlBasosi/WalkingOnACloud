@@ -37,4 +37,8 @@ In this section we will go over creating a node.js project in IBM Cloud and the 
 
 ![Dashboard](images/dashboard.png)
 
+7.	Scroll to the bottom and look for the box that says Continuous Delivery. Click Enable
+
+![Continuous Delivery](images/continuousdelivery.png)
+
 (Content Under Development)
