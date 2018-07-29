@@ -161,6 +161,16 @@ As an example, imagine a box full of toys. You can use a database to represent t
 
 ![Launch DB](images/launch-db.png)
 
+12.	Click on Databases on the left-hand side.
 
+![Databases CL](images/databases-cl.png)
+
+13.	At this point we haven't created any databases so we'll need to create one by clicking on Create Database at the top right and entering a name for your new database. Note: the database name cannot contain capital letters. Once you have typed in the name, you can click Create.
+
+![Create Database](images/create-database.png)
+
+14.	Now that we have created the database, we need to create a document. Click on the + sign next to All Documents and choose New Doc from the pull-down menu.
+
+![Create Document](images/create-document.png)
 
 (Content Under Development)
