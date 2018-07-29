@@ -238,7 +238,7 @@ As an example, imagine a box full of toys. You can use a database to represent t
 
 After you’ve begun your IBM Cloud account and set up your own Cloudant database, you’ll want to populate that database. Each Cloudant database entry is called a “document” and each document is written in JSON. This can be done programmatically or manually. For simplicity this activity covers the manual case. JSON is derived from JavaScript, but can be used by other programming languages in its language-independent description of data. The full syntax diagram can be found at www.json.org and the Cloudant Dashboard will help you ensure that each entry is syntactically correct.
 
-View the web app page at ![thinkinfinity.mybluemix.net/toy/Collectible%20Tracker](thinkinfinity.mybluemix.net/toy/Collectible%20Tracker) This page is constructed based on a single entry in a simple Cloudant database. Snippets of that Cloudant document are provided below with an explanation of how they are interpreted:
+View the web app page at ![thinkinfinity.mybluemix.net/toy/Collectible%20Tracker](www.thinkinfinity.mybluemix.net/toy/Collectible%20Tracker) This page is constructed based on a single entry in a simple Cloudant database. Snippets of that Cloudant document are provided below with an explanation of how they are interpreted:
 
 
 (Content Under Development)
