@@ -205,6 +205,11 @@ As an example, imagine a box full of toys. You can use a database to represent t
 
 23.	Now we need to tell express that we want to use ejs as our template. Add line 17 to app.js (code can be found at snippets/engine.txt).
 
+```
+"ejs": "*",
+"nano": "*"
+```
+
 ![ejs](images/ejs.png)
 
 24.	Next we will put in code in to retrieve the number we put in the database and render the webpage to display it. Add lines 22-46. Replace mydatabase with the name used when creating the database in step 12. Replace mydocument with the name used when creating the document in step 14. Replace number with the name used when inside the document created in step 14. (code found at snippets/database.js).
@@ -228,5 +233,9 @@ As an example, imagine a box full of toys. You can use a database to represent t
 ![Daniel](images/daniel.png)
 
 ## Creating and Accessing a Cloudant® Document — An Introduction to Database Entries using JSON
+
+After you’ve begun your IBM Cloud account and set up your own Cloudant database, you’ll want to populate that database. Each Cloudant database entry is called a “document” and each document is written in JSON. This can be done programmatically or manually. For simplicity this activity covers the manual case. JSON is derived from JavaScript, but can be used by other programming languages in its language-independent description of data. The full syntax diagram can be found at www.json.org and the Cloudant Dashboard will help you ensure that each entry is syntactically correct.
+
+
 
 (Content Under Development)
