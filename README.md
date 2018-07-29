@@ -173,4 +173,36 @@ As an example, imagine a box full of toys. You can use a database to represent t
 
 ![Create Document](images/create-document.png)
 
+15.	Next to _id you'll find a long value. This is an automatic name given to the document. You'll want to change this to something easier to remember so that we can retrieve this document from our app. The id and document name are the first name-value pair and must be separated by a : with each name or value in quotes. The list of the name-value pairs must be surrounded by curly braces { }. Now add another name-value pair for a number. The new name-value pair must be separated from the first with a comma (,). Click Create Document to create it.
+
+![My Document](images/mydocument.png)
+
+16.	Now that you have your database and document created, you can close this window (database setup) and go back to the previous window which you used to launch the database setup window. From this window hit your browser's back button to go back to the app's overview page. Let's now go and edit our code as we did in the previous tutorial. Click View Toolchain at the bottom of your screen. 
+
+![Toolchain2](images/toolchain2.png)
+
+17.	Click on Eclipse Orion Web IDE to edit your code
+
+![Eclipse](images/eclipse.png)
+
+18.	Click package.json to edit it. At the end of line 10, add a comma, then enter lines 11 and 12 shown below. This file is used to tell the server what dependencies our app will need. In this case, we will be using the nano and ejs libraries. Nano is what we will be using to access the database. Ejs will allow us to create an HTML template for the web page and embed JavaScript into the HTML. It also allows us to send variables from app.js to the HTML.
+
+![Package](images/package.png)
+
+19. Copy the contents of snippets/dependencies.txt to the dependencies.
+
+20. Rename index.html (in the public folder) to index.ejs. This changes our original HTML file into an ejs file. You can do this by right-clicking on index.html and choosing Rename.
+
+![Rename](images/rename.png)
+
+21.	Express (see tutorial 1) needs template files to reside in the views directory. To create the views directory, right-click on your top level directory (your app's name) and choose New then Folder. Name your new folder: views.
+
+![Views](images/views.png)
+
+22.	Open the public folder and move (drag and drop) index.ejs to the newly created views folder.
+
+![Drag](images/drag.png)
+
+
+
 (Content Under Development)
