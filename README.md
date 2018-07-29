@@ -227,4 +227,6 @@ As an example, imagine a box full of toys. You can use a database to represent t
 
 ![Daniel](images/daniel.png)
 
+## Creating and Accessing a Cloudant® Document — An Introduction to Database Entries using JSON
+
 (Content Under Development)
