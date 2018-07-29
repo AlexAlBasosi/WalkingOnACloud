@@ -339,4 +339,19 @@ As an exercise, define your own name/value pairs and associated arrays for your 
 
 In summary, JSON provides a simple yet powerful way to describe a database document and the Cloudant Dashboard provides an excellent interface to enter that data into your Cloudant database. Executable JavaScript within HTML provides the ability to incorporate that database information to make your IBM Cloud web apps more dynamic, and that same database information can be used in a variety of ways through a variety of programming languages. 
 
+## Graphical User Interface (GUI) Introduction
+
+In this tutorial, you'll learn how to create some of the basic GUI elements for your app. The GUI is a user interface that includes graphical elements, such as windows, images and buttons. This tutorial assumes that you have completed the Cloudant® Introduction tutorial.
+
+1.	Login to IBM Cloud
+
+2.	From the dashboard, you’ll see any applications that you have created. You should have at least one item from the previous tutorial. Click on the name of the app you created in the Cloudant Introduction tutorial.
+
+3.	Let's now go and edit our code as we did in the previous tutorial. On the app’s overview page, Click View Toolchain at the bottom of your screen, then click on Eclipse Orion Web IDE.
+
+![Toolchain](images/toolchain2.png)
+
+![Eclipse](images/eclipse.png)
+
+
 (Content Under Development)
