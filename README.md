@@ -189,7 +189,12 @@ As an example, imagine a box full of toys. You can use a database to represent t
 
 ![Package](images/package.png)
 
-19. Copy the contents of snippets/dependencies.txt to the dependencies.
+19. Copy the following to the dependencies.
+
+```
+"ejs": "*",
+"nano": "*"
+```
 
 20. Rename index.html (in the public folder) to index.ejs. This changes our original HTML file into an ejs file. You can do this by right-clicking on index.html and choosing Rename.
 
@@ -203,12 +208,9 @@ As an example, imagine a box full of toys. You can use a database to represent t
 
 ![Drag](images/drag.png)
 
-23.	Now we need to tell express that we want to use ejs as our template. Add line 17 to app.js (code can be found at snippets/engine.txt).
+23.	Now we need to tell express that we want to use ejs as our template. Add line 17 to app.js.
 
-```
-"ejs": "*",
-"nano": "*"
-```
+``` app.set('view engine', 'ejs'); ```
 
 ![ejs](images/ejs.png)
 
