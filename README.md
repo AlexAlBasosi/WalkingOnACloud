@@ -384,5 +384,16 @@ This is the code needed to use Bootstrap and must be at the top of each ejs file
 </html>
 ```
 
+### Navigation Bar with Buttons
+
+First, we will create a navigation bar that allows the user to move around the app. In this example, we will have three buttons: Home, Back and Overview.
+
+1.	Right click on the Views folder and select New File. Name this file _menu.ejs_.
+
+2.	Copy and paste the code needed for Bootstrap (above) into the _menu.ejs_ file. Change the Title on line 20 to _“Navigation Menu”_. `<title>Navigation Menu</title>`
+
+3.	Add the following code between `</head>` and `</html>` to create a button group with three buttons. Each button will have a function that occurs when the button is clicked. The Home button will return to the main app page, in this case, _index.ejs_. The Back button returns to the previous page. The Overview button displays the Overview page (to be described later in this document).
+
+
 
 (Content Under Development)
