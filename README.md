@@ -394,6 +394,22 @@ First, we will create a navigation bar that allows the user to move around the a
 
 3.	Add the following code between `</head>` and `</html>` to create a button group with three buttons. Each button will have a function that occurs when the button is clicked. The Home button will return to the main app page, in this case, _index.ejs_. The Back button returns to the previous page. The Overview button displays the Overview page (to be described later in this document).
 
+```
+<body>
+<div class="container-fluid">
+	<div class="btn-group" role="group" aria-label="...">
+<button type="button" class="btn btn-link menu-button" onclick="window.location.href='/'">Home</button>
+<button type="button" class="btn btn-link menu-button" onclick="history.back();">Back</button>
+<button type="button" class="btn btn-link menu-button" onclick="window.location.href='/overview'">Overview</button>
+	</div>
+</div>
+</body>
+```
+
+4.	We can now add our menu to the main GUI page, _index.ejs_. Click _index.ejs_ under the views folder to edit it. Within the `<head>` section add, `<% include ../views/menu %>`. This will include _menu.ejs_ and display the menu at the top of the index page.
+
+![Include](images/include.png)
+
 
 
 (Content Under Development)
