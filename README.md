@@ -137,4 +137,30 @@ As an example, imagine a box full of toys. You can use a database to represent t
 
 ![App Name](images/appname.png)
 
+6. On the left-hand side, click on Connections.
+
+![Connections](images/connections.png)
+
+7. We are going to connect the database service we just created to our app. Click Create Connection on the upper right side. This will generate a list of your existing services you can connect to your app. You should see the database you just created in the list.
+
+![Connect](images/connect.png)
+
+8. Click the Connect button on the right to connect your database to your app. Click Restage to restart your app so that it can now use the database.
+
+![Restage](images/restage.png)
+
+9. Once your app is running, click on Overview on the left-hand side.
+
+![Overview](images/overview.png)
+
+10.	We need to setup the database. Click on Cloudant NoSQL near the bottom left of the screen.
+
+![Cloudant NoSQL](images/cloudant-nosql.png)
+
+11.	Click the Launch button near the top right to enter the database setup screen.
+
+![Launch DB](images/launch-db.png)
+
+
+
 (Content Under Development)
