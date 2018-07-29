@@ -384,7 +384,7 @@ This is the code needed to use Bootstrap and must be at the top of each ejs file
 </html>
 ```
 
-### Navigation Bar with Buttons
+#### Navigation Bar with Buttons
 
 First, we will create a navigation bar that allows the user to move around the app. In this example, we will have three buttons: Home, Back and Overview.
 
@@ -410,6 +410,10 @@ First, we will create a navigation bar that allows the user to move around the a
 
 ![Include](images/include.png)
 
+5.	Go back to the browser page with your app and refresh to see the changes. (there might be a delay in how fast you can refresh).
 
+![Nav](images/nav.png)
+
+#### Overview Page
 
 (Content Under Development)
