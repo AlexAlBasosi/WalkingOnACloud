@@ -131,4 +131,10 @@ As an example, imagine a box full of toys. You can use a database to represent t
 
 ![Cloudant](images/cloudant.png)
 
+4. You can take the default values and just click Create at the bottom of the screen.
+
+5. Go back to the Dashboard (you can get there by clicking IBM Cloud in the upper left). There, you’ll see any applications that you have created. You should have at least 1 item from the previous tutorial. Click on the name of the app you created in the Hello World tutorial. Be careful not to click on the link as that will open your app. We want to make some changes first.
+
+![App Name](images/appname.png)
+
 (Content Under Development)
