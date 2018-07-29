@@ -203,6 +203,28 @@ As an example, imagine a box full of toys. You can use a database to represent t
 
 ![Drag](images/drag.png)
 
+23.	Now we need to tell express that we want to use ejs as our template. Add line 17 to app.js (code can be found at snippets/engine.txt).
 
+![ejs](images/ejs.png)
+
+24.	Next we will put in code in to retrieve the number we put in the database and render the webpage to display it. Add lines 22-46. Replace mydatabase with the name used when creating the database in step 12. Replace mydocument with the name used when creating the document in step 14. Replace number with the name used when inside the document created in step 14. (code found at snippets/database.js).
+
+![Code](images/code.png)
+
+25.	Lastly, we will receive the number obtained from the database that was passed by app.js. Edit index.ejs and add lines 8 & 9 below. <%= number %> is the embedded JavaScript that indicates you want to receive the variable “number”. Remember to use the name that you specified in the document.
+
+![Embedded](images/embedded.png)
+
+26.	Since we made changes on the server (app.js), we need to redeploy the app. Click on the arrow pointing right that appears next to the app status area. If you get a prompt to redeploy, click OK. Note: it may take several minutes for the app to redeploy.
+
+![Redeploy](images/redeploy.png)
+
+27.	Once the status is back to running, you can open the app by clicking on the square with the arrow pointing up and to the right.
+
+![Running](images/running.png)
+
+28.	You should see something like the following:
+
+![Daniel](images/daniel.png)
 
 (Content Under Development)
