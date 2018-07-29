@@ -121,4 +121,14 @@ You can think of a Cloudant database as a box that holds a collection of similar
 
 As an example, imagine a box full of toys. You can use a database to represent the box. Each toy will have a corresponding document and each document will describe each toy with name value pairs such as type:ball, color:red, size:big etc.
 
+1. Login to IBM Cloud.
+
+2. From the main page, click on Catalog in the upper right-hand side.
+
+3. We are going to add a database service to our app. Under Databases click on Cloudant.
+
+![Databases](images/databases.png)
+
+![Cloudant](images/cloudant.png)
+
 (Content Under Development)
