@@ -771,7 +771,7 @@ app.get("/translate", function(req, res){
 
 11.	Save your changes, and you're ready to run. Since we made changes on the server (app.js), we need to redeploy the app. Click on the arrow pointing right that appears next to the app status area.
 
-![Deploy2](images/deploy2.png)
+![Redeploy](images/redeploy.png)
 
 _Note: it may take several minutes for the app to redeploy._
 
