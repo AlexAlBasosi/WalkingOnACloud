@@ -621,6 +621,19 @@ Your Hello World app should now look something like this.
 
 ## IBM Watson™ Language Translator Introduction
 
+In this tutorial, you'll learn how to use the IBM Watson Language Translator service with your app. This tutorial assumes that you have completed the GUI Introduction tutorial.
+
+IBM Watson is a technology platform that uses natural language processing and machine learning. That means that it can understand language as we humans do, and it learns and improves as it's used. Its Language Translator converts text from one language into another, using background from domain-specific models. You can translate English to and from Arabic, Brazilian Portuguese, French, German, Italian or Spanish.
+
+### Creating a new IBM Watson Language Translator Instance
+
+1.	Log in to IBM Cloud
+
+2.	From the main page, click on Catalog in the upper right-hand side.
+
+3.	We are going to add an IBM Watson service to our app. Under Watson, click on _Language Translator_.
+
+![AI](images/ai.png)
 
 
 (Content Under Development)
