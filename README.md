@@ -426,5 +426,42 @@ Next, we will create a simple Overview Page so we can see how that works from th
 
 ![Menu](images/menu.png)
 
+4.	In order to display the Overview Page from the menu, we need to add some function to the _app.js_ file. Edit the _app.js_ file and add the following code to render the Overview page.
+
+```
+app.get('/overview', function(req, res){
+res.render('overview');
+});
+```
+
+5.	Now we can add a body to the Overview page to display some information. We will add a header, description and video. Add the following code just before the `</html>`.
+
+```
+<body>
+	<h1>Overview</h1>
+	<p>This video provides an overview on the toy box creativi-toy interfaces.</p>
+	<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://ibm.ent.box.com/embed/s/3rf2rhz5wuzotu50jxyisemkb0cvp93a" allowfullscreen></iframe>
+	</div>
+</body>
+```
+
+6.	Since we made changes on the server (app.js), we need to redeploy the app. Click on the arrow pointing right that appears next to the app status area. Note: it may take several minutes for the app to redeploy.
+
+![Edit](images/edit.png)
+
+7.	Once the status is back to running, you can open the app by clicking on the square with the arrow pointing up and to the right.
+
+![Arroww](images/arroww.png)
+
+8.	Click on the Overview button to display the Overview page.
+
+9.	You should see something like the following:
+
+![Overview GUI](images/overview-gui.png)
+
+10.	You can now click back and forth between the Overview, Back, Overview and Home buttons to see how the menu buttons work.
+
+
 
 (Content Under Development)
