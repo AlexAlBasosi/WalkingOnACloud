@@ -637,5 +637,122 @@ IBM Watson is a technology platform that uses natural language processing and ma
 
 ![Language Translator](images/language-translator.png)
 
+4.	Take the defaults and click _Create_ at the bottom of the screen.
+
+5.	Go back to the Dashboard (you can get there by clicking IBM Cloud in the upper left). There, you’ll see any applications that you have created. You should have at least one item from the previous tutorial. Click on the name of the app you created in the GUI Introduction tutorial.
+
+![Dan Bluemix](images/danbluemix.png)
+
+6.	On the left-hand side, click on _Connections_.
+
+![Connections](images/connections.png)
+
+7.	We are going to connect the Translator service we just created to our app. Click *Create Connection* on the upper right side. This will generate a list of your existing services you can connect to your app. You should see the translator you just created in the list. Click the Connect button on the right to connect your database to your app.
+
+![Connect LT](images/connect-lt.png)
+
+8.	Click _Restage_ to restart your app so that it can now use the service.
+
+9.	Once your app is running, click on _Connections_ on the left-hand side again. You can see your Language Translator was added.
+
+### Using the IBM Watson Language Translator
+
+1. Let's now go and edit our code as we did in the previous tutorials. Click _View Toolchain_ at the bottom of your app's Overview page, then click on _Eclipse Orion Web IDE_.
+
+![Continuous Delivery](images/continuousdelivery.png)
+
+![Eclipse](images/eclipse.png)
+
+2.	Click _package.json_ to edit it and add lines 13 and 14 (don't forget the comma after line 12). This file is used to tell the server what dependencies our app will need. In this case, we will be using the watson-developer-cloud and body-parser libraries. The watson-developer-cloud libraries are used to use Watson services. The body-parser library will be used in this exercise to handle requests sent from the webpage.
+
+![Package JSON](images/package-json.png)
+
+3.	Next we will add code to connect to our translator service. These code snippets go into _app.js_.
+
+4. Include the Watson Language Translator library and body-parser library:
+
+```
+var watsonTranslate = 
+      require('watson-developer-cloud/language-translator/v2');
+var bodyParser = require('body-parser');
+```
+
+5. Add these lines to use the body parser:
+
+```
+// to support JSON-encoded bodies   
+app.use( bodyParser.json() );       
+// to support URL-encoded bodies
+app.use(bodyParser.urlencoded({     
+    extended: true
+}));
+```
+
+6. Get the credentials for your Watson service. You can get the them from your environment variables. If not already defined, add: 
+
+`var env = JSON.parse(process.env.VCAP_SERVICES);`
+
+Then add the following:
+
+```
+var watsonUser = env.language_translator[0].credentials.username;
+
+var watsonPass = env.language_translator[0].credentials.password;
+
+var watsonURL = env.language_translator[0].credentials.url;
+```
+
+7. Now that you have the credentials, connect to your Watson service:
+
+```
+var languageTranslator = new watsonTranslate({
+            username: watsonUser,      
+            password: watsonPass,
+            url: watsonURL
+});
+```
+
+8. We can now use the Watson service to translate text. We will be creating a new view for our translation page, called translate. This section of code will run when you go to the /translate page in your app. 
+
+```
+app.get("/translate", function(req, res){
+    var languages = { "ar":"Arabic",
+        "pt-BR":"Brazilian Portuguese", "fr":"French",
+        "de":"German", "it":"Italian", "es":"Spanish"};
+    var translateText = "Hi World";
+    var translateLanguage = "fr";
+    //This calls the translator service
+    //"Hi World" is the text being translated
+    //"en" (English) is the language being translated from    
+    //"fr" (French) is the language being translated to
+    languageTranslator.translate({
+        text: translateText, source : "en",
+        target: translateLanguage  },
+      function (err, doc) {
+        if(!err) {
+          //Get the returned translation
+          var translationText = doc.translations[0].translation;
+          //Render translate.ejs
+          //and pass the translated string
+          res.render("translate", {text: translateText,
+                  language:languages[translateLanguage],
+                  translation:translationText});
+        } else {
+            console.log("Error translating: ");
+            console.log(err);
+        }
+  });
+});
+```
+
+9. You can change the text being translated to whatever you like, and the target language to any of the following:
+
+- "ar" (Arabic)
+- "pt-BR" (Brazilian Portuguese)
+- "fr" (French)
+- “de” (German)
+- "it" (Italian)
+- "es" (Spanish)
+
 
 (Content Under Development)
