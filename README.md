@@ -79,7 +79,18 @@ We want our website to have our own things so let's customize it. Return to the 
 
 18. In this repository, go to snippets/index.html and add the code found in the document (substituting yourname for your actual name).
 
-![Your Name](images/yourname.png)
+```
+<!DOCTYPE html>
+<html>
+   <head>
+<title>Hello World!</title>
+   </head>
+   <body>
+<h1>Hi yourname!</h1>
+   </body>
+</html>
+
+```
 
 19. Save your changes.
 
