@@ -754,5 +754,138 @@ app.get("/translate", function(req, res){
 - "it" (Italian)
 - "es" (Spanish)
 
+10. Now we need to create the .ejs view. Create a new file in the _views_ folder, named _translate.ejs_. It will look similar to the code you added to index.ejs. Values in `<%= ___ %>` are the embedded JavaScript that receive the values passed from the render function in app.js.
 
-(Content Under Development)
+```
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>My Translation</title>        
+    </head>
+    <body>
+      <h1>Let's Translate!</h1>
+      <p>"<%= text %>" in <%= language %> is "<%= translation %>"</p>  
+    </body>
+  </html>
+```
+
+11.	Save your changes, and you're ready to run. Since we made changes on the server (app.js), we need to redeploy the app. Click on the arrow pointing right that appears next to the app status area.
+
+![Deploy2](images/deploy2.png)
+
+_Note: it may take several minutes for the app to redeploy._
+
+12.	Once the status is back to running, you can open the app by clicking on the square with the arrow pointing up and to the right.
+
+![Run2](images/run2.png)
+
+13.	Add /translate to the end of your app's URL (https://myapp.mybluemix.net/translate). You should see something like this:
+
+![Translate](images/translate.png)
+
+### Receiving Request from the Web Page
+
+1.	Now that we see how the Watson Language Translator works, let add code to change the language. Open the _menu.ejs_ file from the GUI tutorial. We are going to add a new button and drop-down menu to translate. Insert this code after your Overview button:
+
+```
+<div class="dropdown">
+  <button type="button" class="btn btn-link menu-button dropdown-toggle" data-toggle="dropdown">Translate</button>
+  <div class="dropdown-content">
+    <form id="changelanguage" method="post" action="/translate">
+      <select class="custom-select" name="language"
+          onchange="this.form.submit()">
+        <option selected>Choose Language</option>
+        <option value="ar">Arabic</option>
+        <option value="pt-BR">Brazilian Portuguese</option>
+        <option value="fr">French</option>
+  <option value="de">German</option>
+        <option value="it">Italian</option>
+        <option value="es">Spanish</option>
+      </select>
+    </form>
+  </div>
+</div>
+```
+
+This will create a button named "Translate." When you hover over the button, it will show a drop-down menu with six options. Selecting one of the options will submit the form `(onchange="this.form.submit()")`, creating a POST request to /translate `(method="post" action="/translate")`. It will pass the key language `(name="language")` with the selected language as the value. For example, if you select Italian, it will send `{ language: 'it' }`
+
+2.	Open _public/stylesheets/style.css_ and add the following. This will format the drop-down box:
+
+```
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    top: 0;
+    padding-top: 10px;
+    /* Note opposite values */
+    right: -20rem;
+    width: 20rem;
+}
+```
+
+3.	Include the code needed for Bootstrap in _translate.ejs_ the same as in _index.ejs_ (see the GUI Introduction tutorial if you need a refresher). Also add the following code to include the menu and stylesheet.
+
+```
+<head>
+  <title>My Translation</title>  
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" >
+  <% include ../views/menu %>
+</head>
+```
+
+4.	Now let’s add the code to app.js to handle the request. The code you added before to run when you go to the /translate page handles GET requests. We need to add code to handle POST requests to the /translate page as well. It will be almost identical, but will get the language to translate to from the value passed by the form on the webpage.
+
+```
+app.post('/translate', function(req, res){
+    // the body-parser library lets you get the
+    // { key:value } passed from the form through req.body
+    var translateLanguage = req.body.language;
+    var languages = { "ar":"Arabic",
+        "pt-BR":"Brazilian Portuguese", "fr":"French",
+        "de":"German", "it":"Italian", "es":"Spanish"};
+    var translateText = "Hi World";
+    languageTranslator.translate({
+        text: translateText, source : 'en',
+        target: translateLanguage },
+      function (err, doc) {
+        if(!err) {
+          var translationText = doc.translations[0].translation;
+          res.render("translate", {text: translateText,
+            language:languages[translateLanguage],
+            translation:translationText});
+        } else {
+          console.log("Error translating: " + err);
+          console.log(err);
+        }
+  });
+});
+```
+
+5.	Save your changes and redeploy the app. Once the status is back to running, you can open the app. See the added Translate button in the menu.
+
+![Hi World](images/hi-world.png)
+
+6.	Hover over the Translate button. This will display the drop-down menu with the specified languages.
+
+![Choose Language](images/choose-lang.png)
+
+7.	Select French from the drop-down. This will bring you to your /translate page, and you will see like the following:
+
+![Salut](images/salut.png)
+
+8.	Try changing the language to Italian. The page should reload, and you will see this:
+
+![Ciao](images/ciao.png)
