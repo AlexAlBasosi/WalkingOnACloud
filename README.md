@@ -462,6 +462,150 @@ res.render('overview');
 
 10.	You can now click back and forth between the Overview, Back, Overview and Home buttons to see how the menu buttons work.
 
+#### Search Box with Forms
+Next, we will update our main GUI page, _index.ejs_, to add a header bar with an image and search box. 
+
+1.	We will be using two images on the header bar: a think logo and a magnifying glass. You can download the Think logo from ![ibm.ent.box.com/s/uy3fswgjs3ui4a7n66jlg46tgq2cgqum](ibm.ent.box.com/s/uy3fswgjs3ui4a7n66jlg46tgq2cgqum) and the magnifying glass from ![ibm.ent.box.com/s/j55uikqqp5i5hc414m7rk4njapwhmt1y](ibm.ent.box.com/s/j55uikqqp5i5hc414m7rk4njapwhmt1y) or use your own. The image names should be “hexagon think.png” and “magnify.png” respectively. Once you have downloaded the images to your desktop, expand the public folder and the images folder in IBM Cloud. You can then drag and drop the images from your desktop into the images folder. 
+
+![Images](images/images.png)
+
+2.	Click _index.ejs_ under the views folder to edit it. 
+
+3.	Copy and paste the code needed for Bootstrap (above) at the top of _index.ejs_ file. Remove the following extra lines (20-26).
+
+![Title](images/title.png)
+
+4.	After the `<body>` tag, add the following code to create a Search box with a Submit button. We are using a Form for the Search input box which allows us to specify an action to occur when the form is submitted. In this case, the user will be re-directed to www.google.com when the user hits enter or clicks on the magnifying glass button. For more info on Forms, you can search the internet for Bootstrap Forms and CSS Forms.
+
+```
+<div class="container-fluid">
+<div class="row header match-my-cols clearfix">
+	<div class="col-sm-2">
+	<img class="img-responsive" src="../images/hexagon think.png" />
+	</div>
+	<div class="col-sm-6">
+<form class="form-horizontal" id="searchbox" method="get" action="http://www.google.com">
+	<div class="input-group">
+<input id="search" autocomplete="off" type="text" class="form-control" name="q" placeholder="Search …"> 
+		<span class="input-group-btn">
+<button id="submit" class="btn btn-secondary" type="submit">&nbsp;</button>
+		</span>
+	</div>
+	</form>
+	</div>
+</div>
+```
+
+5.	Next we need to add the magnifying glass image to the submit button. We do this by specifying a background image for the submit button. Expand the public folder and the stylesheets folder in IBM Cloud. Click on the _style.css_ file to edit it. We will talk more about this file in the next section. 
+
+![Style](images/style.png)
+
+6.	Select all the code and delete it (press Ctrl+A, then Delete)
+
+7.	Add the following code to the style.css file. This code specifies the height and width of the submit button, the image to use for the background image, the style of the image, and a border for the image.
+
+```
+#submit {
+	height: 60px;
+	width: 60px;
+	background-image: url('../images/magnify.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px solid #6CCFF6;
+}
+```
+
+8.	Finally, we have to point the _index.ejs_ file to our stylesheet. Go back to the _index.ejs_ file and add the following line of code in the `<head>` section.
+
+`<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />`
+
+![Hello World](images/hello-world.png)
+
+9.	Go back to the browser page with your app and refresh to see the changes. (there might be a delay in how fast you can refresh). 
+
+![Think](images/think.png)
+
+#### Cascading Style Sheets (CSS)
+
+Finally, we can change the way our app looks by describing the elements in the app using a Cascading Style Sheet. For more info on Style for various elements, you can search the internet for Bootstrap element-name and CSS element-name.
+
+1.	In the previous section, we added the style sheet link to the _index.ejs_ file. We need to add this link to all of our ejs files. Go back to the _menu.ejs_ and _overview.ejs_ files and add the following line of code in the `<head>` section.
+
+`<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />`
+
+![Stylesheet](images/stylesheet.png)
+
+2.	First, let’s style the Search box to match the height of the Submit button. We can also change the font size, font color and add a border. Add the following code to the _style.css_ file.
+
+```
+#search {
+	text-align: left;
+	padding-left: 20px;
+	height: 60px;
+	font-size: 150%;
+	color: black;
+	border: 2px solid #6CCFF6;
+}
+```
+
+3.	After each change, go back to the browser page with your app and refresh to see how it looks.
+
+4.	Let’s move the Search box down a little bit so it lines up with the think logo. Add the following code to the _style.css_ file.
+
+```
+#searchbox {
+	margin-top: 10%;
+}
+```
+
+Note: You will notice that the stylesheet references for the elements we added so far are #submit, #search and #searchbox. These references are pointing to the “id” elements in the html.
+
+![Form](images/form.png)
+
+We can also use a class reference in the stylesheet. For example, we can change the font size and font color of the buttons on the Navigation Bar: Home, Back and Overview, by specifying class=”menu-button” on the html elements.
+
+![Button](images/button.png)
+
+We can also reference an element type in the stylesheet. For example, we can change the font size for all `<p>` elements by specifying the element name in the stylesheet.
+
+5.	Let’s change the font size and font color of the buttons on the Navigation Bar. Add the following code to the _style.css_ file.
+
+```
+.menu-button {
+	font-size: 150%;
+	color: black;
+}
+```
+
+6.	Let’s change the font size of the Description on the Overview Page. Add the following code to the _style.css_ file.
+
+```
+p {
+	font-size: 125%;
+}
+```
+
+7.	Finally, let’s add a border and background color to the Header bar containing the Think image and the Search Box. Add the following code to the _style.css_
+
+```
+.row.header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	border-bottom: 7px solid black;
+	background: #25AAE1;
+}
+```
+
+Your Hello World app should now look something like this.
+
+![Final App](images/final-app.png)
+
+
+
+
 
 
 (Content Under Development)
