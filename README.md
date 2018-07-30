@@ -416,4 +416,15 @@ First, we will create a navigation bar that allows the user to move around the a
 
 #### Overview Page
 
+Next, we will create a simple Overview Page so we can see how that works from the Navigation Menu.
+
+1.	Right click on the Views folder and select New File. Name this file _overview.ejs_.
+
+2.	Copy and paste the code needed for Bootstrap (above) into the _overview.ejs_ file. Change the Title on line 20 to “Overview”. `<title>Overview</title>`
+
+3.	Add our menu to the Overview page. Within the <head> section add, `<% include ../views/menu %>`. This will include _menu.ejs_ and display the menu at the top of the Overview page.
+
+![Menu](images/menu.png)
+
+
 (Content Under Development)
