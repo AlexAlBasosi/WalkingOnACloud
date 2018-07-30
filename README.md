@@ -635,5 +635,7 @@ IBM Watson is a technology platform that uses natural language processing and ma
 
 ![AI](images/ai.png)
 
+![Language Translator](images/language-translator.png)
+
 
 (Content Under Development)
