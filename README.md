@@ -619,8 +619,7 @@ Your Hello World app should now look something like this.
 
 ![Final App](images/final-app.png)
 
-
-
+## IBM Watson™ Language Translator Introduction
 
 
 
